@@ -1,75 +1,256 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <title>My Little Confession 💓</title>
 
-    <head>
-
-        <tittle> journal </tittle>
-        
-        <style>
-            body {
-        margin: 0;
-        background: #87CEEB;
-        color: #18324a;
-        font-family: Arial;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    .cloud {
-        position: fixed;
-        font-size: 60px;
-        animation: moveCloud 20s linear infinite;
-    }
-
-    .cloud1 {
-        top: 15%;
-        left: -100px;
-    }
-
-    .cloud2 {
-        top: 40%;
-        left: -200px;
-        animation-duration: 30s;
-    }
-
-    @keyframes moveCloud {
-        from {
-            transform: translateX(-100px);
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #87CEEB;
+            font-family: Arial, sans-serif;
         }
 
-        to {
-            transform: translateX(110vw);
+        /* =========================
+           FLOWER BACKGROUND
+        ========================= */
+
+        .flower {
+            position: absolute;
+            font-size: 45px;
+            animation: float 5s ease-in-out infinite alternate;
+            z-index: 1;
         }
-    }
-</style>
-        
-        
-    </head>
 
-    <body>
+        @keyframes float {
+            from {
+                transform: translateY(0px) rotate(0deg);
+            }
 
-        <h1> the journey of my feelings</h1>
-        
-        <div class="cloud cloud1">☁️</div>
-<div class="cloud cloud2">☁️</div>
+            to {
+                transform: translateY(-40px) rotate(20deg);
+            }
+        }
 
-        </body>
-<p> Creator name: unknown </p>
-<p> Date create: Aug 10. 2026 </p>
+        .f1  { left: 5%;  top: 10%; animation-delay: 0s; }
+        .f2  { left: 20%; top: 5%;  animation-delay: 1s; }
+        .f3  { left: 35%; top: 15%; animation-delay: 2s; }
+        .f4  { left: 50%; top: 5%;  animation-delay: 3s; }
+        .f5  { left: 65%; top: 15%; animation-delay: 1s; }
+        .f6  { left: 80%; top: 5%;  animation-delay: 2s; }
 
-    </body>
+        .f7  { left: 10%; top: 35%; animation-delay: 3s; }
+        .f8  { left: 25%; top: 45%; animation-delay: 1s; }
+        .f9  { left: 40%; top: 35%; animation-delay: 4s; }
+        .f10 { left: 55%; top: 45%; animation-delay: 2s; }
+        .f11 { left: 70%; top: 35%; animation-delay: 0s; }
+        .f12 { left: 85%; top: 45%; animation-delay: 3s; }
 
-    <head>
-      
-        <h2> Chapter 1 </h2>
-        
-    </head>
-    
-    <p> uhm, hi, kung nababasa mo man to im greatful and kung di namn ungreatful eme!.Idk how to start ehe pero kita nman sa tittle siguro diba? syempre oo HAHAHA sometimes im weird but when you know me well you will realize im not just weird guy in school or nerd.For real okk ok okkk i think of this journey is kinda amazing or weird but since then im just think of you as cute girl and very makulit pinapakita mo kung sino ka and im happy to see your side that. Im greatful that i see it. You know seing your happy make my eyes think napaka swerte nangmagiging future husband or jowa mo kasi iba yung dala mong happiness pag nandyan ka, you make people laugh and happy when they are your side. Thats what i observe to you, dont worry im just observant to people im not jugde you ehehe. anyway yun na nga and di ko namn akalain na darating sa point na nungnakita kitq ulit ng gr9 i cant explain my heart beat fast and faster na parabang gusto akong himayain haha oa ba? im just expressing what im feel seing you then. after nun di ka mawala sa isip ko then i keep to my mind why not just happy crush lang nqmn siguro paghanga o nagagandahan lang sayo. But my heart dont feel after na nag gr10 my feelings still growing and bigger like i wish i want to gone in this world lol </p>
-    
-    <a href="page1.html">
-    <button>Next →</button>
-</a>
+        .f13 { left: 5%;  top: 70%; animation-delay: 2s; }
+        .f14 { left: 20%; top: 80%; animation-delay: 4s; }
+        .f15 { left: 35%; top: 65%; animation-delay: 1s; }
+        .f16 { left: 50%; top: 80%; animation-delay: 3s; }
+        .f17 { left: 65%; top: 65%; animation-delay: 0s; }
+        .f18 { left: 80%; top: 80%; animation-delay: 2s; }
 
+
+        /* =========================
+           QUESTION BOX
+        ========================= */
+
+        .container {
+            position: absolute;
+            z-index: 10;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.88);
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+            min-width: 280px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        button {
+            padding: 12px 25px;
+
+            font-size: 18px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            margin: 5px;
+        }
+
+        .yesButton {
+            background: #3498db;
+            color: white;
+        }
+
+        .noButton {
+            background: white;
+            color: #333;
+
+            border: 2px solid #3498db;
+        }
+
+
+        /* =========================
+           HIDE / SHOW
+        ========================= */
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- FLOWERS -->
+
+    <div class="flower f1">🌸</div>
+    <div class="flower f2">🌸</div>
+    <div class="flower f3">🌸</div>
+    <div class="flower f4">🌸</div>
+    <div class="flower f5">🌸</div>
+    <div class="flower f6">🌸</div>
+
+    <div class="flower f7">🌸</div>
+    <div class="flower f8">🌸</div>
+    <div class="flower f9">🌸</div>
+    <div class="flower f10">🌸</div>
+    <div class="flower f11">🌸</div>
+    <div class="flower f12">🌸</div>
+
+    <div class="flower f13">🌸</div>
+    <div class="flower f14">🌸</div>
+    <div class="flower f15">🌸</div>
+    <div class="flower f16">🌸</div>
+    <div class="flower f17">🌸</div>
+    <div class="flower f18">🌸</div>
+
+
+    <!-- =========================
+         PHASE 2
+    ========================= -->
+
+    <div class="container" id="phase2">
+
+        <h1>
+            Would you be surprised if someone confessed to you?
+        </h1>
+
+        <button class="yesButton" id="yesButton">
+            Yes
+        </button>
+
+        <button class="noButton" id="noButton">
+            No
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         PHASE 3
+    ========================= -->
+
+    <div class="container hidden" id="phase3">
+
+        <h1>
+            If someone liked you, would you want to know?
+        </h1>
+
+        <button class="yesButton">
+            Yes
+        </button>
+
+        <button class="noButton">
+            No
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const yesButton = document.getElementById("yesButton");
+        const noButton = document.getElementById("noButton");
+
+        const phase2 = document.getElementById("phase2");
+        const phase3 = document.getElementById("phase3");
+
+
+        /* =========================
+           PHASE 2 — NO TELEPORTS
+        ========================= */
+
+        noButton.addEventListener("click", function() {
+
+            const maxX =
+                window.innerWidth - noButton.offsetWidth;
+
+            const maxY =
+                window.innerHeight - noButton.offsetHeight;
+
+            const randomX =
+                Math.random() * maxX;
+
+            const randomY =
+                Math.random() * maxY;
+
+            noButton.style.position = "fixed";
+
+            noButton.style.left = randomX + "px";
+
+            noButton.style.top = randomY + "px";
+
+        });
+
+
+        /* =========================
+           PHASE 2 — YES GOES TO PHASE 3
+        ========================= */
+
+        yesButton.addEventListener("click", function() {
+
+            phase2.classList.add("hidden");
+
+            phase3.classList.remove("hidden");
+
+        });
+
+    </script>
+
+</body>
 </html>
